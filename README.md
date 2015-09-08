@@ -1,0 +1,1 @@
+Version 2 of creating a github profile reader using angularjs
