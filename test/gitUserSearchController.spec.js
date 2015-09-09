@@ -29,12 +29,17 @@ describe('GitUserSearch', function() {
     beforeEach(inject(function($httpBackend) {
       httpBackend = $httpBackend
       httpBackend
-        .when("GET", "https://api.github.com/search/users?q=tansaku")
+        .expectGET("https://api.github.com/search/users?access_token="+github_access_token+"&q=tansaku")
         .respond(
           {items: items}
         );
     }));
 
+    afterEach(function() {
+      httpBackend.verifyNoOutstandingExpectation();
+      httpBackend.verifyNoOutstandingRequest();
+     });
+    
     it('displays search results', function() {
       ctrl.searchTerm = 'tansaku';
       ctrl.doSearch();
