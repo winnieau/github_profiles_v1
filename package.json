@@ -4,7 +4,8 @@
   "description": "Version 2 of creating a github profile reader using angularjs",
   "main": "index.js",
   "scripts": {
-    "test": "karma start test/karma.conf.js"
+    "test": "karma start test/karma.conf.js",
+    "test1": "protractor test/e2e/conf.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,10 @@
     "karma-chrome-launcher": "^0.2.0",
     "karma-jasmine": "^0.3.6",
     "karma-phantomjs-launcher": "^0.2.1",
-    "phantomjs": "^1.9.18"
+    "phantomjs": "^1.9.18",
+    "protractor": "^2.2.0"
+  },
+  "dependencies": {
+    "http-server": "^0.8.0"
   }
 }
