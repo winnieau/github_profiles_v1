@@ -20,6 +20,7 @@ describe('Github Profile finder', function() {
     var profiles = element.all(by.repeater('user in searchCtrl.searchResult.items')).map(function(elm){
       return elm.getText();
     });
-    expect(profiles).toContain('spike01'); //This won't pass!
+    expect(profiles).toContain('spike01');
   });
+
 });
