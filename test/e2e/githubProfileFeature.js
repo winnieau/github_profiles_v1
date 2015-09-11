@@ -4,7 +4,7 @@ describe('Github Profile finder', function() {
   var searchButton = element(by.className('btn'));
 
   beforeEach(function() {
-    browser.get('http://localhost:9292');
+    browser.get('http://localhost:8080');
   });
 
 

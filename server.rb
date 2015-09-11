@@ -1,8 +1,11 @@
 require 'sinatra/base'
 
 class Server < Sinatra::Base
+
+  set :views, proc { File.join(root, '.')}
+
   get '/' do
     @github_access_token = ENV['GITHUB_ACCESS_TOKEN']
-    send_file 'index.html'
+    erb :"index.html"
   end
 end
