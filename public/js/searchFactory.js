@@ -5,11 +5,11 @@ githubUserSearch.factory('Search', ['$http', function($http) {
       return $http({
         url: queryUrl,
         method: 'GET',
-        params: { 
+        params: {
           q: searchTerm,
           access_token: github_access_token
         }
-      }); 
+      });
     }
   }
 }]);
